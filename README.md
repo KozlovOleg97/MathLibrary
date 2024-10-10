@@ -20,3 +20,7 @@ MathLibrary — это библиотека, предназначенная дл
 
 ```bash
 Install-Package MathLibrary
+
+Или добавив следующую строку в ваш .csproj файл:
+<PackageReference Include="ShapeLibrary" Version="1.0.0" />
+

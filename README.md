@@ -18,9 +18,54 @@ MathLibrary — это библиотека, предназначенная дл
 ## Установка
 Для использования библиотеки MathLibrary добавьте ссылку на неё в ваш проект. Вы можете установить её через NuGet Package Manager:
 
-```bash
+```bash 
 Install-Package MathLibrary
+``` 
 
 Или добавив следующую строку в ваш .csproj файл:
-<PackageReference Include="ShapeLibrary" Version="1.0.0" />
+
+```
+<PackageReference Include="MathLibrary" Version="1.0.0" />
+```
+
+## Использование
+
+### Создание фигур
+Для создания фигур используйте класс MathLibrary, который предоставляет методы для создания объектов Circle и Triangle.
+
+```csharp
+using ShapeLibrary;
+
+// Создание круга с радиусом 5
+var circle = ShapeFactory.CreateShape("Circle", 5); // Радиус = 5
+Console.WriteLine($"Площадь круга: {circle.CalculateArea()}");
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

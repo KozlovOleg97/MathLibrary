@@ -33,6 +33,7 @@ Install-Package MathLibrary
 ### Создание фигур
 Для создания фигур используйте класс MathLibrary, который предоставляет методы для создания объектов Circle и Triangle.
 
+Пример создания круга:
 ```csharp
 using MathLibrary;
 
@@ -46,11 +47,31 @@ Console.WriteLine($"Площадь круга: {circle.CalculateArea()}");
 var triangle = ShapeFactory.CreateShape("Triangle", 3, 4, 5); // Стороны = 3, 4, 5
 ```
 
+### Вычисление площади
+Каждая фигура имеет метод CalculateArea(), который возвращает площадь фигуры.
 
+Пример вычисления площади круга:
+```csharp
+double circleArea = circle.CalculateArea(); // Площадь круга
+Console.WriteLine($"Площадь круга: {circleArea}");
+```
 
+Пример вычисления площади треугольника:
+```csharp
+double triangleArea = triangle.CalculateArea(); // Площадь треугольника
+Console.WriteLine($"Площадь треугольника: {triangleArea}");
+```
 
+### Проверка треугольника на прямоугольность
+Для проверки, является ли треугольник прямоугольным, используйте метод IsRightTriangle():
 
+```csharp
+bool isRightTriangle = triangle.IsRightTriangle();
+Console.WriteLine($"Треугольник прямоугольный: {isRightTriangle}");
+```
 
+## Логгирование
+Логгирование в библиотеке осуществляется через класс Logger, который записывает сообщения об ошибках и других важных событиях. Убедитесь, что в вашей среде настроен вывод логов, чтобы иметь возможность отслеживать возможные проблемы.
 
 
 

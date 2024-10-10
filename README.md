@@ -7,6 +7,7 @@
   - [Создание фигур](#создание-фигур)
   - [Вычисление площади](#вычисление-площади)
   - [Проверка треугольника на прямоугольность](#проверка-треугольника-на-прямоугольность)
+  - [Добавление фигуры](#добавление-фигуры)
 - [Логгирование](#логгирование)
 - [Примеры](#примеры)
 - [Обработка исключений](#обработка-исключений)
@@ -68,6 +69,37 @@ Console.WriteLine($"Площадь треугольника: {triangleArea}");
 ```csharp
 bool isRightTriangle = triangle.IsRightTriangle();
 Console.WriteLine($"Треугольник прямоугольный: {isRightTriangle}");
+```
+
+### Добавление фигуры
+Пример: Добавление новой фигуры (например, прямоугольника) потребует только 2 шага:
+
+1) Реализацию нового класса в папке Models;
+```csharp
+public class Rectangle : IShape
+{
+    public double Width { get; }
+    public double Height { get; }
+
+    public Rectangle(double width, double height)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    public double CalculateArea()
+    {
+        return Width * Height;
+    }
+}
+```
+
+2) Добавление метода в фабрику.
+```csharp
+public static IShape CreateRectangle(double width, double height)
+{
+    return new Rectangle(width, height);
+}
 ```
 
 ## Логгирование

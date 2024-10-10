@@ -34,16 +34,17 @@ Install-Package MathLibrary
 Для создания фигур используйте класс MathLibrary, который предоставляет методы для создания объектов Circle и Triangle.
 
 ```csharp
-using ShapeLibrary;
+using MathLibrary;
 
 // Создание круга с радиусом 5
 var circle = ShapeFactory.CreateShape("Circle", 5); // Радиус = 5
 Console.WriteLine($"Площадь круга: {circle.CalculateArea()}");
 ```
 
-
-
-
+Пример создания треугольника:
+```csharp
+var triangle = ShapeFactory.CreateShape("Triangle", 3, 4, 5); // Стороны = 3, 4, 5
+```
 
 
 

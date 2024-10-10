@@ -73,12 +73,47 @@ Console.WriteLine($"Треугольник прямоугольный: {isRightT
 ## Логгирование
 Логгирование в библиотеке осуществляется через класс Logger, который записывает сообщения об ошибках и других важных событиях. Убедитесь, что в вашей среде настроен вывод логов, чтобы иметь возможность отслеживать возможные проблемы.
 
+## Примеры
 
+Пример использования всей библиотеки:
+```csharp
+using MathLibrary;
 
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Создание круга
+        var circle = ShapeFactory.CreateShape("Circle", 5);
+        Console.WriteLine($"Площадь круга: {circle.CalculateArea()}");
 
+        // Создание треугольника
+        var triangle = ShapeFactory.CreateShape("Triangle", 3, 4, 5);
+        Console.WriteLine($"Площадь треугольника: {triangle.CalculateArea()}");
+        Console.WriteLine($"Треугольник прямоугольный: {triangle.IsRightTriangle()}");
+    }
+}
+```
 
+## Обработка исключений
+При создании фигур и вычислении площади могут возникнуть исключения, например:
+ArgumentException при некорректных параметрах для создания фигур (например, отрицательные значения сторон).
 
+Убедитесь, что вы обрабатываете эти исключения в своем коде:
+```csharp
+try
+{
+    var invalidTriangle = ShapeFactory.CreateShape("Triangle", 1, 1, 10);
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine($"Ошибка: {ex.Message}");
+}
+```
 
+## Контакты
+Email: kozlovoleg2021@gmail.com
+Telegram: https://t.me/Kozlov_Olezha
 
 
 

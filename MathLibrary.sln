@@ -5,7 +5,12 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathLib", "MathLib\MathLib.csproj", "{DADD22C7-31D5-4EDE-B5ED-88C52E269A5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLib.Tests", "MathLib.Tests\MathLib.Tests.csproj", "{BF555EF7-E81F-4521-8E46-2705D142CEE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathLib.Tests", "MathLib.Tests\MathLib.Tests.csproj", "{BF555EF7-E81F-4521-8E46-2705D142CEE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B57900D3-8A85-4157-AC9D-F3A3993DB950}"
+	ProjectSection(SolutionItems) = preProject
+		Query.sql = Query.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
